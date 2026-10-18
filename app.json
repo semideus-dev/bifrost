@@ -37,6 +37,13 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "8ab8bd57-1e6f-47ed-a779-12835328855e"
+      }
+    },
+    "owner": "semideus-devs-team"
   }
 }
