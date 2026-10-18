@@ -1,56 +1,43 @@
-# Welcome to your Expo app 👋
+# Bifrost
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Bifrost is a mobile app that connects people who want company doing an activity. You describe what you want to do in plain language; Bifrost finds others nearby who want to do it too.
 
-## Get started
+## The problem
 
-1. Install dependencies
+You want to play turf football this weekend, catch a concert, try a new café, or take a weekend trip — but you have nobody to do it with. Existing apps list *things happening*; they do not solve *finding a person to go with*. Organising the outing is the easy part. Finding someone is the hard part.
 
-   ```bash
-   npm install
-   ```
+## What Bifrost does
 
-2. Start the app
+Bifrost is a **connection layer between peers**. It does not organise or run anything.
 
-   ```bash
-   npx expo start
-   ```
+- Someone with a plan opens an **Activity** to others — naming the activity, the time, the place, and how many Spots are free.
+- Someone looking describes what they want in plain language — *"3 spots for turf football next weekend under ₹300 per person"* — and Bifrost turns that into a search.
+- Joining is a **Join Request** the Initiator approves — or, if one term doesn't fit, a single bounded **Ask** for a change: one question, no back-and-forth.
+- Once a Join Request is accepted, the Participants share the Activity's chat and a **Bridge** exists between them. No money moves through Bifrost; price is information, not a transaction.
 
-In the output, you'll find options to open the app in a
+## Who it's for
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+The person with a free weekend and nobody to share it with. The Initiator is the same person in a different moment — someone who wanted company and took the first step. Launching city by city in India.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## How it's built
 
-## Get a fresh project
+Expo / React Native with Expo Router and TypeScript, targeting iOS and Android.
 
-When you're ready, run:
+- **Auth** — Better Auth with phone-based identity, so every account maps to a reachable person.
+- **Data** — Neon (PostgreSQL).
+- **Content** — Sanity, holding the curated Category / Interest taxonomy and Place data.
+- **Analytics** — PostHog.
 
-```bash
-npm run reset-project
-```
+> The stack above is chosen but **not yet installed**; the app is still the default Expo starter template.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Status
 
-### Other setup steps
+Early. The core idea and vocabulary are settled (see `GLOSSARY.md`); the feature set is not mapped yet and will come from a spec. Decisions that are hard to reverse live in `docs/adr/`.
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+Deliberately out of scope for now, but kept in mind as future direction: payments, reputation, and a friend graph that outlives an Activity.
 
-## Learn more
+## Read next
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- `GLOSSARY.md` — the words this project thinks in
+- `docs/adr/` — decisions made, and why
+- `AGENTS.md` — how to work in this repo
