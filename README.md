@@ -23,7 +23,7 @@ The person with a free weekend and nobody to share it with. The Initiator is the
 
 Expo / React Native with Expo Router and TypeScript, targeting iOS and Android.
 
-- **Auth** — Better Auth with phone-based identity, so every account maps to a reachable person.
+- **Auth** — Better Auth, signing in with an email code or Google. A Profile is identified by its email; the phone number collected during onboarding is contact information, not identity (ADR-0006).
 - **Data** — Neon (PostgreSQL).
 - **Content** — Sanity, holding the curated Category / Interest taxonomy and Place data.
 - **Analytics** — PostHog.

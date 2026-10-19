@@ -18,3 +18,5 @@ Decisions that are hard to reverse, surprising without context, and the product 
 | [0003](0003-join-approval.md) | Joining an Activity requires the Initiator's approval | Accepted |
 | [0004](0004-data-ownership.md) | Sanity owns the taxonomy and places; Neon owns everything transactional | Accepted |
 | [0005](0005-bounded-ask.md) | Pre-join contact is a single bounded Ask, not a chat | Accepted |
+| [0006](0006-email-identity.md) | Identity is an email address; a phone number is contact information | Accepted |
+| [0007](0007-sign-in-method.md) | A Profile signs in one way, not two | Accepted |

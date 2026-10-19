@@ -4,6 +4,22 @@ Bifrost connects people who want company doing an activity. It is a connection l
 
 ## Language
 
+**Profile**:
+A person's account in Bifrost, with the Full Name and avatar other Participants see. A Participant is a Profile taking part in a specific Activity.
+_Avoid_: User, Account, Member
+
+**Full Name**:
+The name a Profile is shown by. Google supplies it at first sign-in; anyone can edit it. It is not unique — two Profiles may share one — and it never identifies a Profile.
+_Avoid_: Username, Handle, Display name
+
+**Email**:
+The address that identifies a Profile. Proven at sign-in by an email code or by Google. Unlike Full Name, it is unique.
+_Avoid_: Login, Identifier
+
+**Phone**:
+A number a Profile records during onboarding. Required and unique, but unverified — it is contact information, not identity.
+_Avoid_: Contact, Mobile
+
 **Activity**:
 A plan a person opens to others: an activity, a time, a place, and a number of open Spots. The unit that search returns and that people join.
 _Avoid_: Event, Meetup, Plan, Listing
